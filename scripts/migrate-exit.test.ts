@@ -123,7 +123,7 @@ case "$*" in
     n=$(grep -c "migrate deploy" "__CALLS__" || true)
     if [ "$n" -eq 1 ]; then
       echo "Error: P3009" >&2
-      echo "The \`20261014193427_init\` migration started at 2026-10-15 10:32:25.619809 UTC failed" >&2
+      echo 'The \`20261014193427_init\` migration started at 2026-10-15 10:32:25.619809 UTC failed' >&2
       exit 1
     fi
     exit 0
@@ -155,7 +155,7 @@ case "$*" in
   *db\\ execute*) echo "missing User" >&2; exit 1 ;;
   *migrate\\ deploy*)
     echo "Error: P3009" >&2
-    echo "The \`20261014193427_init\` migration started at 2026-10-15 10:32:25.619809 UTC failed" >&2
+    echo 'The \`20261014193427_init\` migration started at 2026-10-15 10:32:25.619809 UTC failed' >&2
     exit 1
     ;;
 esac
@@ -185,7 +185,7 @@ if (/migrate\\ deploy/.test(args)) {
       console.error("Error: P3018");
       console.error("Migration name: 20261014195331_add_votes_and_proof_links");
       console.error("Database error code: 42701");
-      console.error("ERROR: column \\"voteCount\\" of relation \\"Bug\\" already exists");
+      console.error('ERROR: column "voteCount" of relation "Bug" already exists');
       exit(1);
     }
   } catch {}
@@ -203,7 +203,7 @@ case "$*" in
     n=$(grep -c "migrate deploy" "__CALLS__" || true)
     if [ "$n" -eq 1 ]; then
       echo "Error: P3009" >&2
-      echo "The \`20261014193427_init\` migration started at 2026-10-15 10:32:25.619809 UTC failed" >&2
+      echo 'The \`20261014193427_init\` migration started at 2026-10-15 10:32:25.619809 UTC failed' >&2
       exit 1
     fi
     if [ "$n" -eq 2 ]; then
